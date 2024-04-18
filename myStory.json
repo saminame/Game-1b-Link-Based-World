@@ -1,0 +1,144 @@
+{
+    "Title": "Finding the Magical Banana Slug",
+    "Credits": "Created by Samina Esteqlal (sesteqla@ucsc.edu).",
+    "InitialLocation": "Kresge",
+    "Locations": {
+        "Kresge": {
+            "Body": "This is Kresge College, lots of construction. But there are no slugs here :(",
+            "Choices": [
+                {
+                    "Text": "South",
+                    "Target": "Porter"
+                }
+            ]
+        },
+        "Porter": {
+            "Body": "This is Porter College, the only slugs found here are the students. The smell of the sewage becomes one with your nose.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Kresge"
+                },
+                {
+                    "Text": "South",
+                    "Target": "Rachel Carson"
+                },
+                {
+                    "Text": "West",
+                    "Target": "Tour Group"
+                }
+            ]
+        },
+        "Tour Group": {
+            "Body": "Wow, there's a group touring Porter College! I wonder who they're following...",
+            "Choices": [
+                {
+                    "Text": "Follow tour group",
+                    "Target": "Sammy the Slug"
+                },
+                {
+                    "Text": "Go back to Porter College",
+                    "Target": "Porter"
+                }      
+            ]
+        },
+        "Sammy the Slug": {
+            "Body": "You found Sammy the Slug! He hands you a key to the fence for the magical forest~~",
+            "Choices": [
+                {
+                    "Text": "Go back to Porter College",
+                    "Target": "Porter"
+                }
+            ],
+            "ItemsGiven": ["Key"]
+        },
+        "Key": {
+            "Body": "Key to Magical Forest!",
+            "Location": "Sammy the Slug"
+        },
+        "Rachel Carson": {
+            "Body": "Rachel Carson College, AKA the suburbs. Getting close to the slug!",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Porter"
+                },
+                {
+                    "Text": "South",
+                    "Target": "Oakes"
+                }
+            ]
+        },
+        "Oakes": {
+            "Body": "Oakes College, be wary at night or the rats will get you! Is that a trail of slime?",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Rachel Carson"
+                },
+                {
+                    "Text": "South",
+                    "Target": "Magical Forest"
+                },
+                {
+                    "Text": "East",
+                    "Target": "Parking Lot"
+                }
+            ]
+        },
+        "Parking Lot": {
+            "Body": "You have made it to the parking lot! Wow, its really busy here. Lets see if we can find something that can help us..",
+            "Choices": [
+                {
+                    "Text": "West",
+                    "Target": "Oakes"
+                },
+                {
+                    "Text": "Look at the cars",
+                    "Target": "Bumper Sticker"
+                }
+            ]
+        },
+        "Bumper Sticker": {
+            "Body": "This car has a bumber sticker of Sammy the Slug, the school's mascot. Hmm... maybe they can help us find the magical slug.",
+            "Choices": [
+                {
+                    "Text": "Exit parking lot",
+                    "Target": "Oakes"
+                }
+            ]
+        },
+        "Magical Forest": {
+            "Body": "You have made it to the magical forest~~",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Oakes"
+                },
+                {
+                    "Text": "Open Gate",
+                    "Target": "Locked Gate"
+                }
+            ]
+        },
+        "Locked Gate": {
+            "Body": "Oh no! The gate is locked :( It seems we need to find a key to unlock it.",
+            "Choices": [
+                {
+                    "Text": "Use key",
+                    "Target": "Slug Stop",
+                    "Requirements": {
+                        "ItemsGiven": true
+                    }
+                },
+                {
+                    "Text": "Exit magical forest",
+                    "Target": "Oakes"
+                }
+            ]
+        },
+        "Slug Stop": {
+            "Body": "You found the magical banana slug with their fairy friends! Make a wish :D"
+        }
+    }
+}
